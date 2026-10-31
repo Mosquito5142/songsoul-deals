@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f6f3ee;
+  --ink: #1f1a17;
+  --muted: #4f493f;
+  --line: #e4ddd2;
+  --card: #ffffff;
+  --teal: #0f6e6b;
+  --teal-dark: #0b5553;
+  --sand: #f3ead7;
+  --sand-ink: #6a5224;
+  --danger: #9f2d2d;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-sand: var(--sand);
+  --color-sand-ink: var(--sand-ink);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-noto), "Noto Sans Thai", "Leelawadee UI", sans-serif;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 50;
+  transform: translateY(-200%);
+  border-radius: 0.75rem;
+  background: white;
+  padding: 0.5rem 0.75rem;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
